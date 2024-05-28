@@ -20,14 +20,15 @@ def add_score(filename, nick, password, score):
         # Weryfikacja hasła
         if player['password'] == password:
             player['score'] += score
+            player['battles'] += 1
             print(f"Punkty zostały dodane do gracza {nick}.")
         else:
             print("Błędne hasło, punkty nie zostały dodane.")
             return False
     else:
         # Dodajemy nowego gracza
-        player_id = len(rankings) + 1
-        rankings.append({'id': player_id, 'nick': nick, 'password': password, 'score': score})
+        battles = 1
+        rankings.append({'nick': nick, 'password': password, 'score': score, 'battles': battles})
         print(f"Gracz {nick} został dodany.")
     save_rankings(rankings, filename)
     return True
@@ -36,6 +37,8 @@ def show_rankings(filename):
     rankings = load_rankings(filename)
     sorted_rankings = sorted(rankings, key=lambda x: x['score'], reverse=True)
     print("\nRanking:")
+    i = 1
     for player in sorted_rankings:
-        print(f"ID: {player['id']}, Nick: {player['nick']}, Wynik: {player['score']:.2f}")
+        print(f"[{i}], Nick: {player['nick']}, Wynik: {player['score']:.2f}, Gry: {player['battles']}")
+        i += 1
 

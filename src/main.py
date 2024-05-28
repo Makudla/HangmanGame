@@ -37,14 +37,17 @@ def main():
             if score is not None:
                 while True:
                     nick = input("Podaj swój nick: ")
+                    if not nick:
+                        print("Nick nie może być pusty. Spróbuj ponownie.")
+                        continue
                     password = input("Podaj swoje hasło: ")
+                    if not password:
+                        print("Hasło nie może być puste. Spróbuj ponownie.")
+                        continue
 
-                    if nick and password:  # Sprawdzenie, czy nick i hasło nie są puste
-                        success = add_score(rankings_file, nick, password, score)
-                        if success:
-                            break
-                    else:
-                        print("Nick i hasło nie mogą być puste. Spróbuj ponownie.")
+                    success = add_score(rankings_file, nick, password, score)
+                    if success:
+                        break
         elif choice == '2':
             show_rankings(rankings_file)
         elif choice == '3':
