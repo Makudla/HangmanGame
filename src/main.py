@@ -38,9 +38,13 @@ def main():
                 while True:
                     nick = input("Podaj swój nick: ")
                     password = input("Podaj swoje hasło: ")
-                    success = add_score(rankings_file, nick, password, score)
-                    if success:
-                        break
+
+                    if nick and password:  # Sprawdzenie, czy nick i hasło nie są puste
+                        success = add_score(rankings_file, nick, password, score)
+                        if success:
+                            break
+                    else:
+                        print("Nick i hasło nie mogą być puste. Spróbuj ponownie.")
         elif choice == '2':
             show_rankings(rankings_file)
         elif choice == '3':
