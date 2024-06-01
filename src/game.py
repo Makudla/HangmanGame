@@ -69,7 +69,7 @@ def draw_hangman(mistakes):
     print(hangman_stages[mistakes])
 
 def calculate_score(word, mistakes):
-    print("Gratulacje! Zgadłeś słowo:", word)
+    print("\nGratulacje! Zgadłeś słowo:", word)
     score = len(set(word)) / (mistakes + 1)
     print(f"Twój wynik: {score:.2f}")
     return score
@@ -86,7 +86,7 @@ def play_game(wordlist):
     while mistakes < max_mistakes:
         print(" ".join(guessed_word))
         print(" ".join(guessed_letters))
-        letter = input("Zgadnij literę: ").lower()
+        letter = input("\nZgadnij literę: ").lower()
 
         if letter == word:
             return calculate_score(word, mistakes)
@@ -104,7 +104,7 @@ def play_game(wordlist):
             guessed_letters.add(letter)
             mistakes += 1
             draw_hangman(mistakes)
-            print(f"Zła litera! Pozostałe próby: {max_mistakes - mistakes}")
+            print(f"\nZła litera! Pozostałe próby: {max_mistakes - mistakes}")
 
-    print("Przegrałeś! Słowo to:", word)
+    print("\nPRZEGRANA! Słowo to:", word)
     return None

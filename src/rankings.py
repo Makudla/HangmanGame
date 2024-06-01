@@ -14,7 +14,7 @@ def save_rankings(rankings, filename):
 
 def add_score(filename, nick, password, score):
     rankings = load_rankings(filename)
-    # Szukamy gracza po nicku
+    # Szukam gracza po nicku
     player = next((player for player in rankings if player['nick'] == nick), None)
     if player:
         # Weryfikacja hasła
@@ -26,7 +26,7 @@ def add_score(filename, nick, password, score):
             print("Błędne hasło, punkty nie zostały dodane.")
             return False
     else:
-        # Dodajemy nowego gracza
+        # Dodanie nowego gracza
         battles = 1
         rankings.append({'nick': nick, 'password': password, 'score': score, 'battles': battles})
         print(f"Gracz {nick} został dodany.")
