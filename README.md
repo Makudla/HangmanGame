@@ -1,6 +1,6 @@
 ### Opis Projektu Hangman (Wisielec)
 
-Twoim zadaniem jest stworzenie aplikacji konsolowej do gry w wisielca z dodatkowymi funkcjami zarządzania słowami i wynikami graczy. Aplikacja powinna umożliwiać graczom rozpoczęcie nowej gry, przeglądanie rankingu najlepszych wyników, dodawanie i usuwanie słów z listy możliwych do odgadnięcia oraz wyświetlanie listy słów. Wyniki graczy są przechowywane w pliku wraz z ich nickami i hasłami, co umożliwia kumulowanie punktów dla poszczególnych graczy.
+Jest to aplikacja konsolowa do gry w wisielca z dodatkowymi funkcjami zarządzania słowami i wynikami graczy. Aplikacja umożliwia graczom rozpoczęcie nowej gry, przeglądanie rankingu najlepszych wyników, dodawanie i usuwanie słów z listy możliwych do odgadnięcia oraz wyświetlanie listy słów. Wyniki graczy są przechowywane w pliku wraz z ich nickami i hasłami, co umożliwia kumulowanie punktów dla poszczególnych graczy.
 
 #### Wymagania:
 
