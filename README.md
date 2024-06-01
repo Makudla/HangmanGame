@@ -1,3 +1,4 @@
+Marta Kudła s24230
 ### Opis Projektu Hangman (Wisielec)
 
 Jest to aplikacja konsolowa do gry w wisielca z dodatkowymi funkcjami zarządzania słowami i wynikami graczy. Aplikacja umożliwia graczom rozpoczęcie nowej gry, przeglądanie rankingu najlepszych wyników, dodawanie i usuwanie słów z listy możliwych do odgadnięcia oraz wyświetlanie listy słów. Wyniki graczy są przechowywane w pliku wraz z ich nickami i hasłami, co umożliwia kumulowanie punktów dla poszczególnych graczy.
