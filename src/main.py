@@ -20,7 +20,7 @@ def main():
     rankings_file = '../HangmanGame/data/rankings.json'
 
     wordlist = load_wordlist(wordlist_file)
-    print("Witaj w grze WISIELEC!")
+    print("\nWitaj w grze WISIELEC!")
     while True:
         print("\nMenu:")
         print("1. Nowa gra")

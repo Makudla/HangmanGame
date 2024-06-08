@@ -14,7 +14,7 @@ def save_rankings(rankings, filename):
 
 def add_score(filename, nick, password, score):
     rankings = load_rankings(filename)
-    # Szukam gracza po nicku
+    # Szukanie gracza po nicku
     player = next((player for player in rankings if player['nick'] == nick), None)
     if player:
         # Weryfikacja hasła

@@ -81,7 +81,7 @@ def play_game(wordlist):
     max_mistakes = 6
     guessed_letters = set()
 
-    print("Zaczynamy grę w wisielca!")
+    print("\nZaczynamy grę w wisielca!")
 
     while mistakes < max_mistakes:
         print(" ".join(guessed_word))

@@ -14,5 +14,7 @@ def remove_word(wordlist, index):
 
 def display_wordlist(wordlist):
     print("\nLista słów:")
-    for i, word in enumerate(wordlist, start=1):
-        print(f"[{i}] {word}")
+    index = 1
+    for word in wordlist:
+        print(f"[{index}] {word}")
+        index += 1
